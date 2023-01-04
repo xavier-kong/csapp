@@ -125,6 +125,8 @@ extern int printf(const char *, ...);
  *   Rating: 2
  */
 long copyLSB(long x) {
+    int lsb = x & 1;
+
     return 2;
 }
 /*
