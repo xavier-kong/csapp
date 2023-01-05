@@ -1,11 +1,15 @@
 #include <stdio.h>
 
-long copyLSB(long x) {
-	int lsb = x & 1;
+long test(long x) {
+	printf("THE CAHR %06lx\n", x);
+	unsigned int ODD_BITS = 0xAAAAAAAA;
+	printf("WHAT %06lX", (x & ODD_BITS));
 
-	return -lsb;
+	return (x & ODD_BITS) == ODD_BITS;
+
 }
 
 int main(void) {
-	printf("%li\n", copyLSB(7));
+	printf("%06lX\n", test(0xAAAA));
+
 }

@@ -125,9 +125,10 @@ extern int printf(const char *, ...);
  *   Rating: 2
  */
 long copyLSB(long x) {
-    int lsb = x & 1;
+    /*int lsb = x & 1;
 
-    return 2;
+    return 2;*/
+    return -(x & 1);
 }
 /*
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
@@ -139,7 +140,10 @@ long copyLSB(long x) {
  *   Rating: 2
  */
 long allOddBits(long x) {
-    return 2;
+    unsigned int ODD_BITS = 0xAAAAAAAA;
+
+    return (x & ODD_BITS) == ODD_BITS;
+    /*return 2;*/
 }
 /*
  * isNotEqual - return 0 if x == y, and 1 otherwise
