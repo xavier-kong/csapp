@@ -1,15 +1,18 @@
 #include <stdio.h>
 
 long test(long x) {
-	printf("THE CAHR %06lx\n", x);
-	unsigned int ODD_BITS = 0xAAAAAAAA;
-	printf("WHAT %06lX", (x & ODD_BITS));
+    x &= x >> 16;
+    x &= x >> 8;
+    x &= x >> 4;
+    x &= x >> 2;
 
-	return (x & ODD_BITS) == ODD_BITS;
-
+	printf("%06lX\n", (x));
+    return (x & 1) == 1;
 }
 
 int main(void) {
-	printf("%06lX\n", test(0xAAAA));
+	long x = 0xFFFFFFFFFFFf;
+	printf("%06lX\n", (x));
+	printf("%06lX\n", test(x));
 
 }

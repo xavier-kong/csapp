@@ -140,10 +140,15 @@ long copyLSB(long x) {
  *   Rating: 2
  */
 long allOddBits(long x) {
-    unsigned int ODD_BITS = 0xAAAAAAAA;
+    /*unsigned int ODD_BITS = 0x5555;
 
-    return (x & ODD_BITS) == ODD_BITS;
+    return (x & ODD_BITS) == ODD_BITS;*/
     /*return 2;*/
+    x &= x >> 16;
+    x &= x >> 8;
+    x &= x >> 4;
+    x &= x >> 2;
+    return x & 0;
 }
 /*
  * isNotEqual - return 0 if x == y, and 1 otherwise
