@@ -144,11 +144,11 @@ long allOddBits(long x) {
 
     return (x & ODD_BITS) == ODD_BITS;*/
     /*return 2;*/
-    x &= x >> 16;
-    x &= x >> 8;
-    x &= x >> 4;
-    x &= x >> 2;
-    return x & 0;
+    /*printf("x is %lx\n", x);*/
+    int oddBits = (0xAA << 24) | (0xAA << 16) | (0xAA << 8) | (0xAA);
+    /*printf("answer is %x \n", !((x & oddBits) ^ oddBits));*/
+
+    return !((x & oddBits) ^ oddBits);
 }
 /*
  * isNotEqual - return 0 if x == y, and 1 otherwise
@@ -158,7 +158,10 @@ long allOddBits(long x) {
  *   Rating: 2
  */
 long isNotEqual(long x, long y) {
-    return 2L;
+    return !!(x ^ y);
+
+    /*return !(x == y);*/
+    /*return 2L;*/
 }
 /*
  * dividePower2 - Compute x/(2^n), for 0 <= n <= 62
@@ -169,6 +172,7 @@ long isNotEqual(long x, long y) {
  *   Rating: 2
  */
 long dividePower2(long x, long n) {
+    long div = 1 << n;
     return 2L;
 }
 // 3
