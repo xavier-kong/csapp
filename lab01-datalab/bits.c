@@ -172,8 +172,10 @@ long isNotEqual(long x, long y) {
  *   Rating: 2
  */
 long dividePower2(long x, long n) {
-    long div = 1 << n;
-    return 2L;
+    long is_negative = !!(x >> 63);
+    long round = (is_negative << n) + (~is_negative) + 1;
+    x += round;
+    return x >> n;
 }
 // 3
 /*
@@ -185,7 +187,10 @@ long dividePower2(long x, long n) {
  *   Rating: 3
  */
 long remainderPower2(long x, long n) {
-    return 2L;
+    long power = (1 << n) + ~0; // 2^n - 1
+    long mask = x >> 31;
+    long result = x & power;
+    return (x & power) + (((~((!!result) << n)) + 1) & mask);
 }
 /*
  * rotateLeft - Rotate x to the left by n

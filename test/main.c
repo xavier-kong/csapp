@@ -6,6 +6,7 @@ long isNotEqual(long x, long y) {
 }
 
 int main(void) {
-  long x = 1 << 3;
-    printf("%6lX\n", x);
+  int n = 15;
+  printf("%d", (~0) + (1 << n));
+  printf("\n");
 }
