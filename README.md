@@ -5,8 +5,7 @@ http://www.cs.cmu.edu/~213/schedule.html
 - current topic: Bits Btyes, & Integers II:
 	- [] Read 2.2-2.3
 		- currently at 2.3.1
-			- at page 125 
-				- doing practice problem 2.27
+			- doing practice problem 2.28
 	- [] watch lecture video
 	- [] do activity
 
