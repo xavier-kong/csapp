@@ -4,7 +4,7 @@ http://www.cs.cmu.edu/~213/schedule.html
 
 - current waiting on Machine Prog: Basics
 	- [] read 3.1-3.5
-		- currently on 3.2.2
+		- currently on 3.4.1
 	- [] watch lecture
 	- [] bomblab
 
