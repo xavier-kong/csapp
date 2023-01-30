@@ -5,6 +5,9 @@ http://www.cs.cmu.edu/~213/schedule.html
 - current waiting on Machine Prog: Basics
 	- [x] read 3.1-3.5 (maybe not)
 	- [x] watch lecture
+	- [] bootcamp 3
+		- [] read slides
+		- [] do bootcamp
 	- [] bomblab
 
 https://www.youtube.com/playlist?list=PLbY-cFJNzq7z_tQGq-rxtq_n2QQDf5vnM
