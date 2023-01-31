@@ -13,8 +13,7 @@ stack* stack_new() {
   return S;
 }
 
-void push(stack* S, char *x, int sum) {
-  Node* l = (Node*)calloc(1, sizeof(Node));
+void push(stack* S, char *x, int sum) { Node* l = (Node*)calloc(1, sizeof(Node));
   l->data = x;
   l->sum = sum;
   l->next = S->top;
