@@ -1,5 +1,3 @@
-currently at page 67
-
 http://www.cs.cmu.edu/~213/schedule.html
 
 - [] bomblab
